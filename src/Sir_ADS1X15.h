@@ -8,7 +8,7 @@ typedef enum {
 } gain_t;
 
 
-class Adafruit_ADS1015 {
+class Sir_ADS1015 {
 protected:
   // Instance-specific properties
   uint8_t m_i2cAddress;      ///< the I2C address
@@ -17,7 +17,7 @@ protected:
   gain_t m_gain;          ///< ADC gain
 
 public:
-  Adafruit_ADS1015();
+  Sir_ADS1015();
   void init(void);
 
   uint16_t readADC_SingleEnded(uint8_t);
@@ -25,7 +25,7 @@ public:
   int16_t readADC_Differential_2_3(void);
   void startComparator_SingleEnded(uint8_t, int16_t);
   int16_t getLastConversionResults();
-  
+
   void setGain(gain_t);
   gain_t getGain(void);
 
